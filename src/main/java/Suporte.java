@@ -13,13 +13,11 @@ public class Suporte extends Cliente {
     //classe para a area onde os funcionarios dao suporte aos clientes
     //pensei na implementacao um chat de duvidas
 
-    public Suporte(String duvida, String nome, String sexo, String email, String cpf) {
+    public Suporte(String nome, String sexo, String email, String cpf) {
         super(nome, sexo, email, cpf);
     }
 
-    public String duvida;
-
-    public void tiraDuvida(String nome, String cpf) {
+    public void tiraDuvida(String nome, String sexo, String email, String cpf) {
 
     }
 }
