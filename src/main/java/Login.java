@@ -8,10 +8,11 @@
  *
  * @author giova
  */
-public class Produtos extends Cliente {
-
-    public Produtos(String nome, String sexo, String email, String cpf) {
+public class Login extends Cliente{
+    
+    public Login(String nome, String sexo, String email, String cpf) {
         super(nome, sexo, email, cpf);
     }
-       
+    
+    
 }
