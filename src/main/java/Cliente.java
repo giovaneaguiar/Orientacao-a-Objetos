@@ -8,6 +8,7 @@
  *
  * @author giova
  */
+
 public class Cliente {
 
     private String nome;
@@ -79,9 +80,5 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    @Override
-    public String toString() {
-        return this.nome + " - " + this.sexo + " - " + this.email + " - " + this.cpf;  //To change body of generated methods, choose Tools | Templates.
-    }
-
+ 
 }
