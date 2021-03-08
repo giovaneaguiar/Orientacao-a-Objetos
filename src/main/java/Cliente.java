@@ -15,6 +15,7 @@ public class Cliente {
     private String sexo;
     private String email;
     private String cpf;
+    //teste de commit
 
     /**
      * @return the nome
