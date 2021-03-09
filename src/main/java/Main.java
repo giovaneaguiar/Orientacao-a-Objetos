@@ -22,7 +22,7 @@ public class Main {
         l.setSize(250, 250); //tamanho janela
         l.setVisible(true); //chamar a interface
         j.setLineWrap(true);//pesquisei e achei esse comando para alinhar texto
-
+        
     }
 
 }
