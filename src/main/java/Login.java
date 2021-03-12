@@ -67,9 +67,17 @@ public class Login extends JFrame {
                 if (evento.getSource() == entrar) {
                     if (usuariologin.getText().equals("usuario") && usuariosenha.getText().equals("senha")) {
                         //se o usuario for "usuario" e a senha for "senha", está correto.
-                        JOptionPane.showMessageDialog(null, "Bem vindo ao Time 7! ");
-                    }
-                    else if (usuariologin.getText().equals("mestre") && usuariosenha.getText().equals("mestre")) {
+                        switch (JOptionPane.showConfirmDialog(
+                                null, "Você entrou no Time7!\n Bora conferir os produtos? ", "Time7", JOptionPane.YES_NO_OPTION)) {
+                            case 0:
+                                break;
+
+                            case 1:
+                                JOptionPane.showMessageDialog(null, "Volte sempre!", "AVISO", JOptionPane.INFORMATION_MESSAGE);
+                                break;
+
+                        }
+                    } else if (usuariologin.getText().equals("mestre") && usuariosenha.getText().equals("mestre")) {
                         //se o usuario for "usuario" e a senha for "senha", está correto.
                         JOptionPane.showMessageDialog(null, "Olá mestre! ");
                     } else {
