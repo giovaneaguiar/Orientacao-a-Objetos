@@ -33,6 +33,7 @@ public class Login extends JFrame {
     private JButton entrar;
     public JPasswordField usuariosenha;
     private JLabel usuario, senha;
+    public JButton camisa1, camisa2, camisa3, camisa4;
 
     /*JPanel representa um tipo básico de container para inserção de componentes.
     JLabel representa um rótulo de texto.
@@ -70,10 +71,13 @@ public class Login extends JFrame {
                         switch (JOptionPane.showConfirmDialog(
                                 null, "Você entrou no Time7!\n Bora conferir os produtos? ", "Time7", JOptionPane.YES_NO_OPTION)) {
                             case 0:
+                                Produtos pro = new Produtos();
+                                pro.mostraProdutos();
+                                //chama o metodo para mostrar os Produtos
                                 break;
 
                             case 1:
-                                JOptionPane.showMessageDialog(null, "Volte sempre!", "AVISO", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Volte sempre!", "Aviso", JOptionPane.INFORMATION_MESSAGE);
                                 break;
 
                         }
