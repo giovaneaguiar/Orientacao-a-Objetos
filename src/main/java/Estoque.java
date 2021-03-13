@@ -8,84 +8,131 @@
  *
  * @author Causin
  */
-import java.util.Scanner;
-//import java.io.PrintStream;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import javax.accessibility.AccessibleContext;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRootPane;
+import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.AncestorListener;
 
-public class Estoque extends Login{
-
-    //pensei em utilizar um switch para escolher qual tipo de camisa
-    //em sequencia, quantas camisas ele gostaria
-    //a logica é, o usuario digita qual o tamanho, no programa vamos 
-    //imprimir uma tabela explicando qual numero digitar para o seu tamanho
-    Estoque estoque = new Estoque();
-    public int tamGeral;
-    public int contP = 0;
-    public int contM = 0;
-    public int contG = 0;
-    public int contGG = 0;
-    public int pedidosCliente = 0;
-    public int estoqueFinal = 0;
-    Scanner teclado = new Scanner(System.in);
+public class Estoque extends Login implements ActionListener{
+    public JPasswordField senhadeestoque;
+    private JLabel codigo;
     
-    public void CalculaEstoque(){
-    int flag = 0;
-    tamGeral = teclado.nextInt();
-    while (flag != 13) {
-            estoque.showMenu();
-            flag = teclado.nextInt();
-            if (flag >= 1 || flag <=3) {
-                estoque.contaP();
-            } else if (flag >= 4 || flag <=6) {
-                estoque.contaM();
-            } else if (flag >= 7 || flag <=9) {
-                estoque.contaG();
-            } else if (flag >= 10 || flag <=12) {
-                estoque.contaGG();
-            }
-        pedidosCliente = contP + contM + contG + contGG;
-        }
-    estoqueFinal = tamGeral - pedidosCliente;
-   
-    
-    
-           
-    
-   
-    
-}
-    public void showMenu(){
-    System.out.println("Para [P], digite de 1 a 3");
-    System.out.println("Para [M], digite de 4 a 6");
-    System.out.println("Para [G], digite de 7 a 9");
-    System.out.println("Para [GG], digite de 10 a 12");
-    System.out.println("Para [sair] digite 13");
+public JButton getAcessoEstoque() {
+        return acessoEstoque;
     }
-    public void contaP(){
-        System.out.println("Digite o numero de peças ");
-        int aux1 = this.contP;
-        this.contP = teclado.nextInt();
-        this.contP = this.contP + aux1;
+
+    //mestre digita o quanto de estoque ele tem
+    public void setAcessoEstoque(JButton acessoEstoque) {
+        this.acessoEstoque = acessoEstoque;
+    }
+
+    public JButton getEstoquechefe() {
+        return estoquechefe;
+    }
+
+    public void setEstoquechefe(JButton estoquechefe) {
+        this.estoquechefe = estoquechefe;
+    }
+    
+    
+    
+
+    public Estoque()
+    {
+        setTitle("Area do chefe");
+        setSize(450, 350); //Define o tamanho em pixel, largura e altura
+        setLocation(400, 150);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Fecha a tela no roda-pé
+        setResizable(false); //Não redimisiona a tela, se for true, redimisiona
+        getContentPane().setBackground(Color.WHITE); //Aqui podemos misturar cores
+        getContentPane().setLayout(null); //Informa que nao vai usar gerenciador de Layout
+        JButton estoquechefe = new JButton("Estoque da loja");
+        getContentPane().add(estoquechefe);
+        estoquechefe.setBounds(150, 30, 150 , 25);
+        JButton contratos = new JButton("Contratos");
+        getContentPane().add(contratos);
+        contratos.setBounds(150, 80, 150, 25);
+        JButton dadosGerais = new JButton("Dados do chefe");
+        getContentPane().add(dadosGerais);
+        dadosGerais.setBounds(150, 130, 150, 25);
+        //posso tentar criar uma senha pra entrar na area de Estoque
+        
+        //estoquechefe.addAncestorListener((AncestorListener) new ActionListener() {
+            //public void actionPerformed(ActionEvent evento){
+                //if(evento.getSource() == estoquechefe){
+                   // dispose();
+                    //switch(JOptionPane.showConfirmDialog( null, "Deseja acessar a area de estoque?", "Estoque Time7", JOptionPane.YES_NO_OPTION))
+                   // {
+                    // case 0:
+                   //             Estoque novo = new Estoque();
+                    //            novo.setLocationRelativeTo(null);
+                    //            dispose();
+                     //           novo.acessoEstoque();
+                     //           break;
+                   // }
+          //  }
+            
+            
+            
+            
+               
+                
+                
+            
+       // });
         
         
-}
-    public void contaM(){
-    System.out.println("Digite o numero de peças ");
-        int aux1 = this.contM;
-        this.contM = teclado.nextInt();
-        this.contM = this.contM + aux1;
-}
-    public void contaG(){
-    System.out.println("Digite o numero de peças ");
-        int aux1 = this.contG;
-        this.contG = teclado.nextInt();   
-        this.contG = this.contG + aux1;
+        
     }
-    public void contaGG(){
-    System.out.println("Digite o numero de peças ");
-        int aux1 = this.contGG;
-        this.contGG = teclado.nextInt();
-        this.contGG =  this.contGG + aux1;
+
+    public JButton getContratos() {
+        return contratos;
+    }
+
+    public void setContratos(JButton contratos) {
+        this.contratos = contratos;
+    }
+
+    public JButton getDadosGerais() {
+        return dadosGerais;
+    }
+
+    public void setDadosGerais(JButton dadosGerais) {
+        this.dadosGerais = dadosGerais;
+    }
+
+    
+    void CalculaEstoque(){
+        new Estoque().setVisible(true);
     }
     
+    
+    
+    
+    
+    
+    
+    
+    public void actionPerformed(ActionEvent e) {
+       
+    }
+
+    
+    
+    
 }
-   //falta ativar na main, lembrar disso
+//falta ativar na main, lembrar disso
