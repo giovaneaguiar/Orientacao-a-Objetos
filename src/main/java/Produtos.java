@@ -1,6 +1,9 @@
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import javax.accessibility.AccessibleContext;
 import javax.swing.BorderFactory;
@@ -21,7 +24,9 @@ import javax.swing.border.TitledBorder;
  *
  * @author giova
  */
-public class Produtos extends Login {
+public class Produtos extends Login implements ActionListener {
+
+    private Object bt_nova_jan;
 
     public JButton getCamisa1() {
         return camisa1;
@@ -56,16 +61,40 @@ public class Produtos extends Login {
     }
 
     public Produtos() {
-
+       setTitle("Produtos" );
+        setSize(450, 350); //Define o tamanho em pixel, largura e altura
+        setLocation(400, 150);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Fecha a tela no roda-pé
+        setResizable(false); //Não redimisiona a tela, se for true, redimisiona
+        getContentPane().setBackground(Color.WHITE); //Aqui podemos misturar cores
+        getContentPane().setLayout(null); //Informa que nao vai usar gerenciador de Layout
+        JButton camisa1 = new JButton("Time7 Classic");
+        getContentPane().add(camisa1);
+        camisa1.setBounds(150, 30, 120, 25);
+        JButton camisa2 = new JButton("Time7 Elegant");
+        getContentPane().add(camisa2);
+        camisa2.setBounds(150, 80, 120, 25);
+        JButton camisa3 = new JButton("Time7 Black");
+        getContentPane().add(camisa3);
+        camisa3.setBounds(150, 130, 120, 25);
+        JButton camisa4 = new JButton("Time7 Tie-Dye");
+        getContentPane().add(camisa4);
+        camisa4.setBounds(150, 180, 120, 25);
     }
 
     void mostraProdutos() {
-        GridLayout grid = new GridLayout(3, 2);
-        BorderLayout border = new BorderLayout();
-        JPanel painelLogin = new JPanel(grid);
-        JPanel painelPrincipal = new JPanel(border);
-        TitledBorder bordaLogin = new TitledBorder(BorderFactory.createLoweredBevelBorder(), "Informações do usuário", 1, 1);
-
+         new Produtos().setVisible(true);
+         //mostra nova janela com as caracteristicas do construtor
+    
+       
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+     
+    }
+
+    
+   
+    
 }
