@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -95,7 +96,7 @@ public class Login extends JFrame {
                     } else if (usuariologin.getText().equals("mestre") && usuariosenha.getText().equals("mestre")) {
                         //se o usuario for "usuario" e a senha for "senha", está correto.
                         dispose();
-                        switch (JOptionPane.showConfirmDialog(null, "Bem vindo ao trabalho Mestre \n Deseja entrar?", "Time7", JOptionPane.YES_NO_OPTION)) {
+                        switch (JOptionPane.showConfirmDialog(null, "Bem vindo ao trabalho Mestre! \n Deseja entrar?", "Time7", JOptionPane.YES_NO_OPTION)) {
                             case 0:
                                 Estoque est = new Estoque();
                                 est.setLocationRelativeTo(null);
