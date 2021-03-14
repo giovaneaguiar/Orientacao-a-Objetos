@@ -18,9 +18,10 @@ public class Main {
         Login l = new Login();
 
         JTextArea j = new JTextArea();
-        l.setLocationRelativeTo(null); // abre a interface no meio da tela
+         // abre a interface no meio da tela
         l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // fechar programa no x
-        l.setSize(250, 250); //tamanho janela
+        l.setSize(250, 250);
+        l.setLocationRelativeTo(null);//tamanho janela
         l.setVisible(true); //chamar a interface
         j.setLineWrap(true);//pesquisei e achei esse comando para alinhar texto
 

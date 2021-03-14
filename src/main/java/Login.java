@@ -74,8 +74,12 @@ public class Login extends JFrame {
                     if (usuariologin.getText().equals("usuario") && usuariosenha.getText().equals("senha")) {
                         //se o usuario for "usuario" e a senha for "senha", está correto.
                         dispose();
-                        switch (JOptionPane.showConfirmDialog(
-                                null, "Você entrou no Time7!\n Bora conferir os produtos? ", "Time7", JOptionPane.YES_NO_OPTION)) {
+                        Object[] options = {"Sim", "Não"};
+
+                        switch (JOptionPane.showOptionDialog(null,
+                                "Você entrou no Time7!\nBora conferir os produtos?",
+                                "Time7", JOptionPane.YES_NO_OPTION,
+                                JOptionPane.QUESTION_MESSAGE, null, options, options[0])) {
                             case 0:
                                 Produtos pro = new Produtos();
                                 pro.setLocationRelativeTo(null); // abre a interface no meio da tela;
@@ -85,7 +89,7 @@ public class Login extends JFrame {
                                 break;
 
                             case 1:
-                                JOptionPane.showMessageDialog(null, "Bom rolé!", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Bom rolé!", "Time7", JOptionPane.INFORMATION_MESSAGE);
                                 break;
                         }
                     } else if (usuariologin.getText().equals("mestre") && usuariosenha.getText().equals("mestre")) {
