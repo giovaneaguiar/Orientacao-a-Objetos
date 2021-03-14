@@ -83,25 +83,75 @@ public class Produtos extends Login {
         getContentPane().add(camisa4);
         camisa4.setBounds(150, 180, 120, 25);
 
-        /* ImageIcon c1 = new ImageIcon(getClass().getResource("Images/classic.jpg"));
-        JLabel l1 = new JLabel(c1);
-
         camisa1.addActionListener(new ActionListener() {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa1) {
-                    
-                    l1.setSize(700, 700);
-                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                    JFrame frame = new JFrame(
+                            "Classic");
+                    setLocationRelativeTo(null);
                     setResizable(false);
-                    getContentPane().setBackground(Color.WHITE);
-                    setVisible(true);
-                    add(l1);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
 
                 }
             }
         }
         );
+        camisa2.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa2) {
+
+                    JFrame frame = new JFrame(
+                            "Elegant");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
+        camisa3.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa3) {
+
+                    JFrame frame = new JFrame(
+                            "Black");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
+        camisa4.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa4) {
+
+                    JFrame frame = new JFrame(
+                            "Tie-Dye");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
+
+        /* ImageIcon c1 = new ImageIcon(getClass().getResource("Images/classic.jpg"));
+        JLabel l1 = new JLabel(c1);
+
+        
          ImageIcon c1 = new ImageIcon(getClass().getResource("elegant.jpg"));
         JLabel l1 = new JLabel(c1);
         ImageIcon c2 = new ImageIcon(getClass().getResource("elegant.jpg"));
