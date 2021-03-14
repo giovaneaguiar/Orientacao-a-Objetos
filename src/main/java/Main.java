@@ -16,7 +16,6 @@ public class Main {
 
     public static void main(String[] args) {
         Login l = new Login();
-
         JTextArea j = new JTextArea();
          // abre a interface no meio da tela
         l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // fechar programa no x
@@ -24,7 +23,8 @@ public class Main {
         l.setLocationRelativeTo(null);
         l.setVisible(true); //chamar a interface
         j.setLineWrap(true);//pesquisei e achei esse comando para alinhar texto
-
+        
+        
     }
 
 }

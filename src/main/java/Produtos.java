@@ -238,6 +238,7 @@ public class Produtos extends Login {
         add(camisa1);
          */
     }
+    
 
     void mostraProdutos() {
         new Produtos().setVisible(true);

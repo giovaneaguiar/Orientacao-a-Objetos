@@ -10,6 +10,7 @@
  */
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,6 +31,7 @@ import javax.swing.event.AncestorListener;
 public class Estoque extends Login implements ActionListener{
     public JPasswordField senhadeestoque;
     private JLabel codigo;
+    private JButton acess;
     
 public JButton getAcessoEstoque() {
         return acessoEstoque;
@@ -71,31 +73,55 @@ public JButton getAcessoEstoque() {
         dadosGerais.setBounds(150, 130, 150, 25);
         //posso tentar criar uma senha pra entrar na area de Estoque
         
-        //estoquechefe.addAncestorListener((AncestorListener) new ActionListener() {
-            //public void actionPerformed(ActionEvent evento){
-                //if(evento.getSource() == estoquechefe){
-                   // dispose();
-                    //switch(JOptionPane.showConfirmDialog( null, "Deseja acessar a area de estoque?", "Estoque Time7", JOptionPane.YES_NO_OPTION))
-                   // {
-                    // case 0:
-                   //             Estoque novo = new Estoque();
-                    //            novo.setLocationRelativeTo(null);
-                    //            dispose();
-                     //           novo.acessoEstoque();
-                     //           break;
-                   // }
-          //  }
+        estoquechefe.addActionListener(new ActionListener() {
             
+            //acao
             
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == estoquechefe) {
+
+                    JFrame frame = new JFrame("Area de estoque");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
+        contratos.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == contratos) {
+
+                    JFrame frame = new JFrame("Area de Contratos");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
+        dadosGerais.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == dadosGerais) {
+
+                    JFrame frame = new JFrame("Dados gerais");
+                    setLocationRelativeTo(null);
+                    setResizable(false);
+                    frame.setVisible(true);
+                    frame.setSize(500, 500);
+
+                }
+            }
+        }
+        );
             
-            
-               
-                
-                
-            
-       // });
-        
-        
+          
         
     }
 
