@@ -5,10 +5,13 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.net.URL;
 import javax.accessibility.AccessibleContext;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRootPane;
@@ -24,9 +27,7 @@ import javax.swing.border.TitledBorder;
  *
  * @author giova
  */
-public class Produtos extends Login implements ActionListener {
-
-    private Object bt_nova_jan;
+public class Produtos extends Login {
 
     public JButton getCamisa1() {
         return camisa1;
@@ -61,7 +62,8 @@ public class Produtos extends Login implements ActionListener {
     }
 
     public Produtos() {
-       setTitle("Produtos" );
+
+        setTitle("Produtos");
         setSize(450, 350); //Define o tamanho em pixel, largura e altura
         setLocation(400, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Fecha a tela no roda-pé
@@ -80,21 +82,117 @@ public class Produtos extends Login implements ActionListener {
         JButton camisa4 = new JButton("Time7 Tie-Dye");
         getContentPane().add(camisa4);
         camisa4.setBounds(150, 180, 120, 25);
+
+        /* ImageIcon c1 = new ImageIcon(getClass().getResource("Images/classic.jpg"));
+        JLabel l1 = new JLabel(c1);
+
+        camisa1.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa1) {
+                    
+                    l1.setSize(700, 700);
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    setResizable(false);
+                    getContentPane().setBackground(Color.WHITE);
+                    setVisible(true);
+                    add(l1);
+
+                }
+            }
+        }
+        );
+         ImageIcon c1 = new ImageIcon(getClass().getResource("elegant.jpg"));
+        JLabel l1 = new JLabel(c1);
+        ImageIcon c2 = new ImageIcon(getClass().getResource("elegant.jpg"));
+        JLabel l2 = new JLabel(c2);
+        ImageIcon c3 = new ImageIcon(getClass().getResource("black.jpg"));
+        JLabel l3 = new JLabel(c3);
+        ImageIcon c4 = new ImageIcon(getClass().getResource("tie-dye.jpg"));
+        JLabel l4 = new JLabel(c4); 
+        
+ 
+
+        camisa1.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa1) {
+                    add(l1);
+                    setSize(800, 800);
+                    
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    setResizable(false);
+                    getContentPane().setBackground(Color.WHITE);
+                    setVisible(true);
+
+                }
+            }
+        }
+        );
+       
+
+        camisa2.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa2) {
+                    add(l2);
+                    setSize(800, 800);
+                    //setLocation(400, 150);
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    setResizable(false);
+                    getContentPane().setBackground(Color.WHITE);
+                    setVisible(true);
+                }
+            }
+        }
+        );
+        
+
+        camisa3.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa3) {
+                    add(l3);
+                    setSize(800, 800);
+                    //setLocation(400, 150);
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    setResizable(false);
+                    getContentPane().setBackground(Color.WHITE);
+                    setVisible(true);
+
+                }
+            }
+        }
+        );
+        
+
+        camisa4.addActionListener(new ActionListener() {
+            //acao
+            public void actionPerformed(ActionEvent evento) {
+                if (evento.getSource() == camisa4) {
+                    add(l4);
+                    setSize(800, 800);
+                    //setLocation(400, 150);
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    setResizable(false);
+                    getContentPane().setBackground(Color.WHITE);
+                    setVisible(true);
+
+                }
+            }
+        }
+        );
+        
+     
+        
+        add(camisa1);
+         */
     }
 
     void mostraProdutos() {
-         new Produtos().setVisible(true);
-         //mostra nova janela com as caracteristicas do construtor
-    
-       
+        new Produtos().setVisible(true);
+
+        //mostra nova janela com as caracteristicas do construtor
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-     
-    }
-
-    
-   
-    
 }

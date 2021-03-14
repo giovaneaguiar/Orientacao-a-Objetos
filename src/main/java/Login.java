@@ -31,16 +31,15 @@ public class Login extends JFrame {
 
     public JTextField usuariologin, login;
     private JButton entrar;
-    public JButton acessoEstoque, acessoestoque2; 
+    public JButton acessoEstoque, acessoestoque2;
     public JPasswordField usuariosenha;
     private JLabel usuario, senha;
     public JButton camisa1, camisa2, camisa3, camisa4;
     public JButton estoquechefe, contratos, dadosGerais;
+
     /**
      *
      */
-     
-
     /*JPanel representa um tipo básico de container para inserção de componentes.
     JLabel representa um rótulo de texto.
     JTextField representa um campo de texto onde o usuário pode informar um texto em uma linha.
@@ -92,7 +91,7 @@ public class Login extends JFrame {
                     } else if (usuariologin.getText().equals("mestre") && usuariosenha.getText().equals("mestre")) {
                         //se o usuario for "usuario" e a senha for "senha", está correto.
                         dispose();
-                        switch(JOptionPane.showConfirmDialog( null, "Bem vindo ao trabalho Mestre \n Deseja entrar?", "Time7", JOptionPane.YES_NO_OPTION)){
+                        switch (JOptionPane.showConfirmDialog(null, "Bem vindo ao trabalho Mestre \n Deseja entrar?", "Time7", JOptionPane.YES_NO_OPTION)) {
                             case 0:
                                 Estoque est = new Estoque();
                                 est.setLocationRelativeTo(null);
@@ -102,8 +101,8 @@ public class Login extends JFrame {
                             case 1:
                                 JOptionPane.showMessageDialog(null, "Até mais chefe", "Aviso", JOptionPane.INFORMATION_MESSAGE);
                         }
-                    
-                        } else {
+
+                    } else {
                         // se nao, incorreto.
                         JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos! ");
                     }
