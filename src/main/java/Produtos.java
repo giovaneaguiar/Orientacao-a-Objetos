@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -14,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRootPane;
@@ -64,7 +66,8 @@ public class Produtos extends Login {
     }
 
     public Produtos() {
-
+        
+  
         setTitle("Produtos");
         setSize(450, 350); //Define o tamanho em pixel, largura e altura
         setLocation(400, 150);
@@ -89,50 +92,36 @@ public class Produtos extends Login {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa1) {
-                    JFrame frame = new JFrame(
-                            "Classic");
-                    Container container = frame.getContentPane();
-                    setResizable(false);
-                    frame.setSize(500, 500);
-                    ImageIcon c1 = new ImageIcon("Images/classic.png");
-                    JLabel label = new JLabel(c1);
-                    JPanel panel = new JPanel();
-                    panel.add(label);
-                    frame.setVisible(true);
-
+                    Imagem i = new Imagem();
+                    i.criaGUI();
+                    
                 }
             }
 
         }
         );
+        add(camisa1);
 
         camisa2.addActionListener(new ActionListener() {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa2) {
-
-                    JFrame frame = new JFrame(
-                            "Elegant");
-                    setLocationRelativeTo(null);
-                    setResizable(false);
-                    frame.setVisible(true);
-                    frame.setSize(500, 500);
+                      Imagem2 i = new Imagem2();
+                      i.criaGUI2();
+                    
 
                 }
             }
         }
         );
+       
         camisa3.addActionListener(new ActionListener() {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa3) {
-
-                    JFrame frame = new JFrame(
-                            "Black");
-                    setLocationRelativeTo(null);
-                    setResizable(false);
-                    frame.setVisible(true);
-                    frame.setSize(500, 500);
+                      Imagem3 i = new Imagem3();
+                      i.criaGUI3();
+                    
 
                 }
             }
@@ -143,12 +132,8 @@ public class Produtos extends Login {
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa4) {
 
-                    JFrame frame = new JFrame(
-                            "Tie-Dye");
-                    setLocationRelativeTo(null);
-                    setResizable(false);
-                    frame.setVisible(true);
-                    frame.setSize(500, 500);
+                    Imagem4 i = new Imagem4();
+                    i.criaGUI4();
 
                 }
 
