@@ -28,10 +28,10 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.AncestorListener;
 
-public class Estoque extends Login implements ActionListener{
-    public JPasswordField senhadeestoque;
-    private JLabel codigo;
-    private JButton acess;
+public class Estoque extends Login implements ActionListener {
+    //public JPasswordField senhadeestoque;
+    //private JLabel codigo;
+    //private JButton acess;
     
 public JButton getAcessoEstoque() {
         return acessoEstoque;
@@ -68,9 +68,9 @@ public JButton getAcessoEstoque() {
         JButton contratos = new JButton("Contratos");
         getContentPane().add(contratos);
         contratos.setBounds(150, 80, 150, 25);
-        JButton dadosGerais = new JButton("Dados do chefe");
-        getContentPane().add(dadosGerais);
-        dadosGerais.setBounds(150, 130, 150, 25);
+        JButton fornecedores = new JButton("Fornecedores");
+        getContentPane().add(fornecedores);
+        fornecedores.setBounds(150, 130, 150, 25);
         //posso tentar criar uma senha pra entrar na area de Estoque
         
         estoquechefe.addActionListener(new ActionListener() {
@@ -95,7 +95,7 @@ public JButton getAcessoEstoque() {
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == contratos) {
 
-                    JFrame frame = new JFrame("Area de Contratos");
+                    JFrame frame = new JFrame("Area de contratos");
                     setLocationRelativeTo(null);
                     setResizable(false);
                     frame.setVisible(true);
@@ -105,16 +105,18 @@ public JButton getAcessoEstoque() {
             }
         }
         );
-        dadosGerais.addActionListener(new ActionListener() {
+        fornecedores.addActionListener(new ActionListener() {
             //acao
             public void actionPerformed(ActionEvent evento) {
-                if (evento.getSource() == dadosGerais) {
-
-                    JFrame frame = new JFrame("Dados gerais");
-                    setLocationRelativeTo(null);
-                    setResizable(false);
-                    frame.setVisible(true);
-                    frame.setSize(500, 500);
+                if (evento.getSource() == fornecedores) {
+                    //dando erro na hora de carregar a area de fornecedores
+                    TelaFornece tela = new TelaFornece();
+                    tela.montaTela();
+                    //JFrame frame = new JFrame("Fornecedores");
+                    //setLocationRelativeTo(null);
+                    //setResizable(false);
+                    //frame.setVisible(true);
+                    //frame.setSize(500, 500);
 
                 }
             }
@@ -133,13 +135,15 @@ public JButton getAcessoEstoque() {
         this.contratos = contratos;
     }
 
-    public JButton getDadosGerais() {
-        return dadosGerais;
+    public JButton getFornecedores() {
+        return fornecedores;
     }
 
-    public void setDadosGerais(JButton dadosGerais) {
-        this.dadosGerais = dadosGerais;
+    public void setFornecedores(JButton fornecedores) {
+        this.fornecedores = fornecedores;
     }
+
+    
 
     
     void CalculaEstoque(){

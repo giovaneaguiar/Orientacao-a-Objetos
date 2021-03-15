@@ -36,7 +36,7 @@ public class Login extends JFrame {
     public JPasswordField usuariosenha;
     private JLabel usuario, senha;
     public JButton camisa1, camisa2, camisa3, camisa4;
-    public JButton estoquechefe, contratos, dadosGerais;
+    public JButton estoquechefe, contratos, fornecedores;
 
     /**
      *
