@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Imagem3 {
+public class ImagemContrato {
 
     // Declara componentes
     JLabel rotulo;
@@ -31,7 +31,8 @@ public class Imagem3 {
         painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         // Cria componentes
-        rotulo = new JLabel("Flame");
+        rotulo = new JLabel("Contrato para preencher");
+
         /* Tenta abrir uma imagem de uma url, ou seja, link da web, tentei fugir
         fato de colocar imagens do computador. 
         
@@ -42,12 +43,11 @@ public class Imagem3 {
        fornecido em seu bloco.
        O catch por sua vez faz o tratamento dos erros que aconteceram.
          */
-
-        // Tenta abrir uma imagem de uma url
         try {
-            url = new URL("https://pbs.twimg.com/profile_images/1303221173669564416/HGua4ctJ_400x400.jpg");
+            url = new URL("https://53d3d7c6616c861c.cdn.gocache.net/modelo-img/contrato-parceria-comercial-11183495.1x1.png");
             imagem = ImageIO.read(url);
         } catch (IOException e) {
+            //se der errado, esse comando retorna o erro mais detalhado.
             e.printStackTrace();
         }
 
@@ -68,18 +68,18 @@ public class Imagem3 {
     }
 
     // Cria GUI 
-    public static void criaGUI3() {
+    public static void criaGUIContrato() {
         // Cria formulario
         JFrame formulario = new JFrame("Time7");
 
         // cria nova instancia da classe
-        Imagem3 pic = new Imagem3();
+        ImagemContrato pic = new ImagemContrato();
 
         // Adiciona painel ao formulario
         formulario.setContentPane(pic.criaPainel());
 
         // Adiciona tamanho do formulario
-        formulario.setSize(800, 600);
+        formulario.setSize(900, 900);
 
         // Exibe formulario
         formulario.setVisible(true);
@@ -89,10 +89,10 @@ public class Imagem3 {
 
         // Thread do swing
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
-
+            // este trecho peguei auxilio da web e preciso tirar duvida.
             public void run() {
                 // Mostra Gui
-                criaGUI3();
+                criaGUIContrato();
             }
         });
     }

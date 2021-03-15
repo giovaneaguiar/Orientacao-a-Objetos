@@ -89,7 +89,7 @@ public class Imagem {
 
         // Thread do swing
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
-         // este trecho peguei auxilio da web e preciso tirar duvida.
+            // este trecho peguei auxilio da web e preciso tirar duvida.
             public void run() {
                 // Mostra Gui
                 criaGUI();

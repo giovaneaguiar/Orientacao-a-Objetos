@@ -1,4 +1,7 @@
 
+
+
+
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.image.BufferedImage;
@@ -45,7 +48,7 @@ public class Imagem2 {
 
         // Tenta abrir uma imagem de uma url
         try {
-            url = new URL("https://i.pinimg.com/564x/10/11/77/1011778369203d0e782ad824c01c4f92.jpg");
+            url = new URL("https://specials-images.forbesimg.com/imageserve/6020966ec861c342d7b98437/960x0.jpg?fit=scale");
             imagem = ImageIO.read(url);
         } catch (IOException e) {
             e.printStackTrace();

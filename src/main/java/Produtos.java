@@ -1,4 +1,5 @@
 
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -81,7 +82,7 @@ public class Produtos extends Login {
         JButton camisa2 = new JButton("Time7 Elegant");
         getContentPane().add(camisa2);
         camisa2.setBounds(150, 80, 120, 25);
-        JButton camisa3 = new JButton("Time7 Black");
+        JButton camisa3 = new JButton("Time7 Flame");
         getContentPane().add(camisa3);
         camisa3.setBounds(150, 130, 120, 25);
         JButton camisa4 = new JButton("Time7 Tie-Dye");
