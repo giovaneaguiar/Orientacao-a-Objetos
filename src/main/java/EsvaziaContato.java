@@ -7,23 +7,22 @@ import java.awt.event.ActionListener;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Causin
  */
-public class EsvaziaContato implements ActionListener{
+public class EsvaziaContato implements ActionListener {
 
     public EsvaziaContato(TelaFornece tela) {
         this.tela = tela;
     }
-    
+
     TelaFornece tela;
 
     @Override
     public void actionPerformed(ActionEvent e) {
         tela.getTfDescricao().setText("");
         tela.getTfNome().setText("");
-        tela.getTfTelefone().setText(""); 
+        tela.getTfTelefone().setText("");
     }
 }

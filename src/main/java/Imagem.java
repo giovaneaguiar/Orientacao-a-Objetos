@@ -1,6 +1,7 @@
 
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Font;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
@@ -32,6 +33,9 @@ public class Imagem {
 
         // Cria componentes
         rotulo = new JLabel("Classic");
+        //escolhe fonte
+        Font f = new Font("SansSerif", Font.BOLD, 20);
+        rotulo.setFont(f);
 
         /* Tenta abrir uma imagem de uma url, ou seja, link da web, tentei fugir
         fato de colocar imagens do computador. 
@@ -83,6 +87,7 @@ public class Imagem {
 
         // Exibe formulario
         formulario.setVisible(true);
+
     }
 
     public static void main(String[] args) {

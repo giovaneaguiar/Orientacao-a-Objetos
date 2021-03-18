@@ -9,12 +9,11 @@ import javax.swing.ListModel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Causin
  */
-public class SalvarContato implements ActionListener{
+public class SalvarContato implements ActionListener {
 
     TelaFornece tela;
 
@@ -22,18 +21,14 @@ public class SalvarContato implements ActionListener{
         this.tela = tela;
     }
 
-    
-    
-    
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         DefaultListModel<ContatoFornece> model = (DefaultListModel<ContatoFornece>) tela.getLista().getModel();
-        
-        model.addElement(new ContatoFornece(tela.getTfNome().getText(),tela.getTfTelefone().getText(),tela.getTfDescricao().getText()));
+
+        model.addElement(new ContatoFornece(tela.getTfNome().getText(), tela.getTfTelefone().getText(), tela.getTfDescricao().getText()));
         tela.getLista().setModel(model);
         tela.repaint();
-        
+
     }
-    
+
 }

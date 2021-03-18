@@ -1,5 +1,4 @@
 
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -34,6 +33,8 @@ import javax.swing.border.TitledBorder;
  */
 public class Produtos extends Login {
 
+    private JButton camisa1, camisa2, camisa3, camisa4;
+
     public JButton getCamisa1() {
         return camisa1;
     }
@@ -67,8 +68,7 @@ public class Produtos extends Login {
     }
 
     public Produtos() {
-        
-  
+
         setTitle("Produtos");
         setSize(450, 350); //Define o tamanho em pixel, largura e altura
         setLocation(400, 150);
@@ -95,7 +95,7 @@ public class Produtos extends Login {
                 if (evento.getSource() == camisa1) {
                     Imagem i = new Imagem();
                     i.criaGUI();
-                    
+
                 }
             }
 
@@ -107,22 +107,20 @@ public class Produtos extends Login {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa2) {
-                      Imagem2 i = new Imagem2();
-                      i.criaGUI2();
-                    
+                    Imagem2 i = new Imagem2();
+                    i.criaGUI2();
 
                 }
             }
         }
         );
-       
+
         camisa3.addActionListener(new ActionListener() {
             //acao
             public void actionPerformed(ActionEvent evento) {
                 if (evento.getSource() == camisa3) {
-                      Imagem3 i = new Imagem3();
-                      i.criaGUI3();
-                    
+                    Imagem3 i = new Imagem3();
+                    i.criaGUI3();
 
                 }
             }
@@ -146,7 +144,6 @@ public class Produtos extends Login {
 
     void mostraProdutos() {
         new Produtos().setVisible(true);
-
         //mostra nova janela com as caracteristicas do construtor
     }
 

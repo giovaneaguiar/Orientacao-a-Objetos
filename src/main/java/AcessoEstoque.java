@@ -9,13 +9,13 @@ import javax.swing.JFrame;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Causin
  */
-public class AcessoEstoque extends Estoque implements ActionListener{
-        public AcessoEstoque(){
+public class AcessoEstoque extends Estoque implements ActionListener {
+
+    public AcessoEstoque() {
         setTitle("Estoque");
         setSize(450, 350); //Define o tamanho em pixel, largura e altura
         setLocation(400, 150);
@@ -26,5 +26,5 @@ public class AcessoEstoque extends Estoque implements ActionListener{
         //JButton estoquechefe = new JButton("Estoque da loja");
         //getContentPane().add(estoquechefe);
         //estoquechefe.setBounds(150, 30, 120 , 25);
-}
+    }
 }

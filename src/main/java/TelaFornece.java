@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,6 +24,7 @@ import javax.swing.ListSelectionModel;
  */
 //erro é nessa e na de salvar
 public class TelaFornece extends JFrame {
+
     JPanel telaPrin;
     private JList<ContatoFornece> lista;
     private JTextField tfNome;
@@ -42,10 +44,9 @@ public class TelaFornece extends JFrame {
         this.lista = lista;
     }
 
-    
-    public TelaFornece(){
+    public TelaFornece() {
         this.lastIndex = 0;
-        
+
     }
 
     public int getLastIndex() {
@@ -87,22 +88,21 @@ public class TelaFornece extends JFrame {
     public void setTfDescricao(JTextField tfDescricao) {
         this.tfDescricao = tfDescricao;
     }
-    
-    
-    private void configJan(){
-         this.setSize(400,300 );
+
+    private void configJan() {
+        this.setSize(400, 300);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.telaPrin = new JPanel();
         this.telaPrin.setLayout(new BorderLayout());
-        
-        
+
     }
+
     private void configuraContatos() {
         JPanel jpContatos = new JPanel();
         jpContatos.setBorder(BorderFactory.createTitledBorder("Fornecedores"));
         jpContatos.setLayout(new BorderLayout());
-        jpContatos.setPreferredSize(new Dimension (200,200));  
+        jpContatos.setPreferredSize(new Dimension(200, 200));
 
         DefaultListModel<ContatoFornece> model = new DefaultListModel<>();
 
@@ -112,16 +112,16 @@ public class TelaFornece extends JFrame {
         lista.addListSelectionListener(new ConfigLista(this));
         jpContatos.add(new JScrollPane(lista), BorderLayout.CENTER);
 
-
         telaPrin.add(jpContatos, BorderLayout.WEST);
     }
+
     private void configuraFormulario() {
         //definindo tamanho padrao
         int size = 15;
         JPanel jpFormulario = new JPanel();
         jpFormulario.setBorder(BorderFactory.createTitledBorder("Dados de Fornecedores"));
         //definiu um painel / uma borda com titulo
-        
+
         jpFormulario.add(new JLabel("Nome:"));
         tfNome = new JTextField(size);
         jpFormulario.add(tfNome);
@@ -134,28 +134,28 @@ public class TelaFornece extends JFrame {
         tfDescricao = new JTextField(size);
         jpFormulario.add(tfDescricao);
 
-                
         //agora é a parte em que sao criadas as classes de açoes
         JButton btnAdicionar = new JButton("Adicionar");
-        btnAdicionar.addActionListener(new SalvarContato(this) );
+        btnAdicionar.addActionListener(new SalvarContato(this));
         jpFormulario.add(btnAdicionar);
 
         JButton btnRemover = new JButton("Remover");
         btnRemover.addActionListener(new DeleteContato(this));
         jpFormulario.add(btnRemover);
-        
+
         JButton btnLimpar = new JButton("Limpar");
         btnLimpar.addActionListener(new EsvaziaContato(this));
         jpFormulario.add(btnLimpar);
-        
+
         JButton btnEditar = new JButton("Editar");
         btnEditar.addActionListener(new AjusteContato(this));
         jpFormulario.add(btnEditar);
-        
+
         telaPrin.add(jpFormulario, BorderLayout.CENTER);
 
     }
-     public void mostraTela() {
+
+    public void mostraTela() {
         this.add(telaPrin);
         this.setVisible(true);
     }
@@ -168,7 +168,7 @@ public class TelaFornece extends JFrame {
     }
 
     //public static void main(String[] args) {
-     //   TelaFornece tela = new TelaFornece();
-     //   tela.montaTela();
+    //   TelaFornece tela = new TelaFornece();
+    //   tela.montaTela();
     //}
 }

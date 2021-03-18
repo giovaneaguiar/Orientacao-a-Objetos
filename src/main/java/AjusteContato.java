@@ -7,18 +7,18 @@ import javax.swing.ListModel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Causin
  */
-public class AjusteContato implements java.awt.event.ActionListener{
-     TelaFornece tela;
+public class AjusteContato implements java.awt.event.ActionListener {
+
+    TelaFornece tela;
 
     public AjusteContato(TelaFornece tela) {
         this.tela = tela;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         ListModel<ContatoFornece> model = this.tela.getLista().getModel();
@@ -26,10 +26,7 @@ public class AjusteContato implements java.awt.event.ActionListener{
         fornece.setNome(tela.getTfNome().getText());
         fornece.setTelefone(tela.getTfTelefone().getText());
         fornece.setAnotacoes(tela.getTfDescricao().getText());
-        
-        
         tela.repaint();
 
-        
     }
 }

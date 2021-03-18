@@ -9,23 +9,23 @@
  * @author Causin
  */
 public class ContatoFornece {
+
     private String nome;
     private String telefone;
     private String anotacoes;
 
-    public ContatoFornece (String nome, String telefone, String anotacoes){
+    public ContatoFornece(String nome, String telefone, String anotacoes) {
         this.nome = nome;
         this.telefone = telefone;
         this.anotacoes = anotacoes;
     }
-    public ContatoFornece (){
+
+    public ContatoFornece() {
         this.nome = "";
         this.telefone = "";
         this.anotacoes = "";
     }
 
-    
-    
     public String getNome() {
         return nome;
     }
@@ -49,12 +49,11 @@ public class ContatoFornece {
     public void setAnotacoes(String anotacoes) {
         this.anotacoes = anotacoes;
     }
-    
-    public String toString(){
-        
+
+    public String toString() {
+
         return this.nome;
         //metodo de swing para imprimir os contatos
     }
 
-    
 }
