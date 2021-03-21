@@ -91,7 +91,7 @@ public class TelaFornece extends JFrame {
 
     private void configJan() {
         this.setSize(400, 300);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
 
         this.telaPrin = new JPanel();
         this.telaPrin.setLayout(new BorderLayout());

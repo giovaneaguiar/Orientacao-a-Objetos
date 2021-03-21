@@ -13,6 +13,7 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Imagem {
@@ -51,8 +52,9 @@ public class Imagem {
             url = new URL("https://i.pinimg.com/564x/02/dd/2b/02dd2bc7c4ab1311d6ede07ba08e6e19.jpg");
             imagem = ImageIO.read(url);
         } catch (IOException e) {
-            //se der errado, esse comando retorna o erro mais detalhado.
-            e.printStackTrace();
+            //se der errado, esse comando retorna o erro mais detalhado
+            //IOException é a exception padrão para erros de leitura e gravação.
+            JOptionPane.showMessageDialog(null, "Erro com o endereço URL", "Aviso", JOptionPane.INFORMATION_MESSAGE);
         }
 
         // Cria uma figura e a exibe em um JLabel
@@ -94,7 +96,9 @@ public class Imagem {
 
         // Thread do swing
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            // este trecho peguei auxilio da web e preciso tirar duvida.
+            /* O que o método SwingUtilities.invokeLater() faz é receber um evento de interface 
+            (encapsulado numa implementação de Runnable; para que seja despachado pela thread de 
+            eventos de interface assim que houver oportunidade. */
             public void run() {
                 // Mostra Gui
                 criaGUI();

@@ -30,12 +30,12 @@ import javax.swing.text.StyledEditorKit.AlignmentAction;
  */
 public class Login extends JFrame {
 
-    public JTextField usuariologin, login;
-    private JButton entrar;
-    public JButton acessoEstoque, acessoestoque2;
-    public JPasswordField usuariosenha;
+    private JTextField usuariologin, login;
     private JLabel usuario, senha;
+    private JButton entrar;
+    private JPasswordField usuariosenha;
     public JButton estoquechefe, contratos, fornecedores;
+    public JButton acessoEstoque, acessoestoque2;
 
     /**
      *

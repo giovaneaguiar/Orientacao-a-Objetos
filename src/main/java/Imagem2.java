@@ -13,6 +13,7 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Imagem2 {
@@ -51,7 +52,7 @@ public class Imagem2 {
             url = new URL("https://specials-images.forbesimg.com/imageserve/6020966ec861c342d7b98437/960x0.jpg?fit=scale");
             imagem = ImageIO.read(url);
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erro com o endereço URL", "Aviso", JOptionPane.INFORMATION_MESSAGE);
         }
 
         // Cria uma figura e a exibe em um JLabel
