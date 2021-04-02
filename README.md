@@ -1,5 +1,5 @@
 # Orientacao-a-Objetos
-Projeto de um Sistema de Informação para a disciplina Orientação a Objetos da UFJF.
+Projeto de um Sistema de Informação de Vendas para a disciplina Orientação a Objetos da UFJF.
 
 Nome: Giovane Machado Aguiar. 
 Matrícula: 201876019
