@@ -1,5 +1,5 @@
 <h1 align="center">Orientação a Objetos</h1>
-<p align="center">Projeto de um Sistema de Informação de Vendas para a disciplina Orientação a Objetos da <strong>UFJF</strong>.</p>
+<p align="center">Projeto de um Sistema de Informação de Vendas para a <strong>UFJF</strong>.</p>
 <p>
 Nome: Giovane Machado Aguiar 
 </p>
